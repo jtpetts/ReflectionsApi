@@ -1,0 +1,7 @@
+﻿{
+  "jwtPrivateKey": "unsecureKey",
+  "MongoDBUrl": "mongodb://localhost/reflections"
+}
+// the environment variable for the environment is: NODE_ENV
+// view: set NODE_ENV
+// assign: set NODE_ENV = "x"

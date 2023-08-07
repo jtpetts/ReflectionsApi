@@ -1,0 +1,4 @@
+﻿{
+  "jwtPrivateKey": "reflections_jwtPrivateKey",
+  "MongoDBUrl": "reflections_MongoDBUrl"
+}

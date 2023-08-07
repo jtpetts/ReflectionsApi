@@ -1,0 +1,33 @@
+{
+  "name": "reflections-api",
+  "version": "0.0.0",
+  "description": "ReflectionsApi",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --watchAll --runInBand --coverage"
+  },
+  "engines": {
+    "node": "18.17.0"
+  },
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^1.31.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "joi": "^14.3.1",
+    "joi-objectid": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "7.4.2",
+    "winston": "^3.10.0",
+    "winston-mongodb": "^4.0.9"
+  },
+  "devDependencies": {
+    "jest": "^29.6.0",
+    "supertest": "^3.4.2"
+  }
+}
