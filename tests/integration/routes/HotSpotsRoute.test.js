@@ -22,7 +22,7 @@ describe("/api/Maps", () => {
       description: "The region where it all happens",
       imageFilename: "TwoCities.jpg",
       hotSpots: [
-        {
+        { 
           x: 371,
           y: 173,
           name: "Riverside",
