@@ -19,6 +19,15 @@ router.get(
 
 //__________________________________________________________________________________________________________
 router.get(
+  "/novel/:novelId",
+  asyncMiddleware(async (request, response) => {
+    const maps = await MapModel.find({ novelId: request.params.novelId });
+    response.send(maps);
+  })
+);
+
+//__________________________________________________________________________________________________________
+router.get(
   "/:id",
   validateObjectId,
   asyncMiddleware(async (request, response) => {
@@ -79,6 +88,7 @@ router.post(
     }
 
     map.name = request.body.name;
+    map.novelId = request.body.novelId;
     map.description = request.body.description;
     map.imageFilename = request.body.imageFilename;
 
@@ -122,6 +132,7 @@ router.put(
     // Now, if you are using a library like underscore you can use a bunch of utility classes like _.isEmpty _.has(obj,key) and _.isString()
     // merge the properties that have been sent in. put is a partial update
     map.name = _.has(request.body, "name") ? request.body.name : map.name;
+    map.novelId = _.has(request.body, "novelId") ? request.body.novelId : map.novelId;
     map.description = _.has(request.body, "description")
       ? request.body.description
       : map.description;
