@@ -43,6 +43,13 @@ const mapSchema = new mongoose.Schema({
     minLength: 3,
     maxLength: 50
   },
+  novelId: {
+    type: String,
+    trim: true,
+    required: true,
+    minLength: 3,
+    maxLength: 50
+  },
   description: {
     type: String,
     trim: true,
@@ -94,6 +101,10 @@ const hotSpotJoiSchema = {
 const mapJoiSchema = {
   _id: Joi.objectId(),
   name: Joi.string()
+    .min(3)
+    .max(50)
+    .required(),
+  novelId: Joi.string()
     .min(3)
     .max(50)
     .required(),

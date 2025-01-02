@@ -9,7 +9,7 @@ require("./startup/database")();
 
 // PORT is an environment variable which will set the port for this to listen to.
 // process is global
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3011;
 const server = app.listen(port, () =>
   winston.info(`listening on port ${port}...`)
 );
